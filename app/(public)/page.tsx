@@ -1,4 +1,3 @@
-import Sidebar from "@/components/Sidebar";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -10,7 +9,6 @@ export default function Home() {
   return (
     <>
       <h1>Inicio</h1>
-      <Sidebar />
     </>
   );
 }
