@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Logo from "./Logo";
 import GuestNavigation from "./GuestNavigation";
+import Hero from "./Hero";
 
 export default function Header() {
   return (
