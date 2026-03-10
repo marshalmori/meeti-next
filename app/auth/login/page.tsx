@@ -9,9 +9,6 @@ export default function LoginPage() {
   return (
     <>
       <Heading>Iniciar Sesión</Heading>
-      <Heading level={2}>Iniciar Sesión</Heading>
-      <Heading level={5}>Iniciar Sesión</Heading>
-      <Heading level={6}>Iniciar Sesión</Heading>
     </>
   );
 }
