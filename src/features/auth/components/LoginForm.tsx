@@ -1,8 +1,10 @@
 "use client";
 
+import Form from "@/src/shared/components/forms/Form";
+
 export default function LoginForm() {
   return (
-    <form className="mt-10 space-y-3">
+    <Form>
       <label className="block" htmlFor="email">
         E-mail
       </label>
@@ -22,6 +24,6 @@ export default function LoginForm() {
         placeholder="Ingresa tu Password"
         className="border border-slate-200 w-full p-2"
       />
-    </form>
+    </Form>
   );
 }
