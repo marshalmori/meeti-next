@@ -1,13 +1,12 @@
 "use client";
 
 import Form from "@/src/shared/components/forms/Form";
+import FormLabel from "@/src/shared/components/forms/FormLabel";
 
 export default function LoginForm() {
   return (
     <Form>
-      <label className="block" htmlFor="email">
-        E-mail
-      </label>
+      <FormLabel htmlFor="email">E-mail</FormLabel>
       <input
         type="email"
         id="email"
@@ -15,9 +14,7 @@ export default function LoginForm() {
         className="border border-slate-200 w-full p-2"
       />
 
-      <label className="block" htmlFor="password">
-        Password
-      </label>
+      <FormLabel htmlFor="password">Password</FormLabel>
       <input
         type="password"
         id="password"
