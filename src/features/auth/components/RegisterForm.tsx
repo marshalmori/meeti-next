@@ -21,10 +21,10 @@ export default function RegisterForm() {
         placeholder="Password - Min. 8 Caracteres"
       />
 
-      <FormLabel htmlFor="password2">Repetir Contraseña</FormLabel>
+      <FormLabel htmlFor="password_confirmation">Repetir Contraseña</FormLabel>
       <FormInput
         type="password"
-        id="password2"
+        id="password_confirmation"
         placeholder="Repite tu Password"
       />
 
