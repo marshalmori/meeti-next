@@ -10,9 +10,18 @@ import {
 } from "@/src/shared/components/forms";
 
 export default function RegisterForm() {
-  const { register } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = () => {
+    console.log("Submit...");
+  };
+
   return (
-    <Form>
+    <Form onSubmit={handleSubmit(onSubmit)}>
       <FormLabel htmlFor="name">Nombre</FormLabel>
       <FormInput
         id="name"
