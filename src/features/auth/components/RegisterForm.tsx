@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
   Form,
+  FormError,
   FormInput,
   FormLabel,
   FormSubmit,
@@ -34,6 +35,7 @@ export default function RegisterForm() {
         placeholder="Ingresa tu Nombre"
         {...register("name")}
       />
+      {errors.name && <FormError>{errors.name.message}</FormError>}
 
       <FormLabel htmlFor="email">E-mail</FormLabel>
       <FormInput
@@ -42,6 +44,7 @@ export default function RegisterForm() {
         placeholder="Ingressa tu E-mail"
         {...register("email")}
       />
+      {errors.email && <FormError>{errors.email.message}</FormError>}
 
       <FormLabel htmlFor="password">Contraseña</FormLabel>
       <FormInput
@@ -50,6 +53,7 @@ export default function RegisterForm() {
         placeholder="Password - Min. 8 Caracteres"
         {...register("password")}
       />
+      {errors.password && <FormError>{errors.password.message}</FormError>}
 
       <FormLabel htmlFor="password_confirmation">Repetir Contraseña</FormLabel>
       <FormInput
@@ -58,6 +62,9 @@ export default function RegisterForm() {
         placeholder="Repite tu Password"
         {...register("passwordConfirmation")}
       />
+      {errors.passwordConfirmation && (
+        <FormError>{errors.passwordConfirmation.message}</FormError>
+      )}
 
       <FormSubmit value={"Registrarme"} />
     </Form>
