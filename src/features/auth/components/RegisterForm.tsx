@@ -21,8 +21,6 @@ export default function RegisterForm() {
     mode: "onSubmit",
   });
 
-  console.log(errors);
-
   const onSubmit = () => {
     console.log("Submit...");
   };
