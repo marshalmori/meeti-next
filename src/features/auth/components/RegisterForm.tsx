@@ -18,6 +18,7 @@ export default function RegisterForm() {
     formState: { errors },
   } = useForm({
     resolver: zodResolver(SignUpSchema),
+    mode: "onSubmit",
   });
 
   console.log(errors);
