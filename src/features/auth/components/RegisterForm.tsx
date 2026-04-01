@@ -9,7 +9,7 @@ import {
   FormLabel,
   FormSubmit,
 } from "@/src/shared/components/forms";
-import { SignUpSchema } from "../schemas/authSchema";
+import { SignUpInput, SignUpSchema } from "../schemas/authSchema";
 
 export default function RegisterForm() {
   const {
@@ -18,11 +18,11 @@ export default function RegisterForm() {
     formState: { errors },
   } = useForm({
     resolver: zodResolver(SignUpSchema),
-    mode: "onSubmit",
+    mode: "all",
   });
 
-  const onSubmit = () => {
-    console.log("Submit...");
+  const onSubmit = (data: SignUpInput) => {
+    console.log(data);
   };
 
   return (
