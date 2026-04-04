@@ -18,6 +18,11 @@ class AuthService {
         password,
       },
     });
+
+    return {
+      error: "",
+      success: "Cuenta Creada Correctamente, revisa tu e-mail",
+    };
   }
 }
 
