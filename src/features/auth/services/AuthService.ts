@@ -1,4 +1,5 @@
 import { SignUpInput } from "../schemas/authSchema";
+import { auth } from "@/lib/auth";
 
 class AuthService {
   async register(credentials: SignUpInput) {
@@ -9,6 +10,14 @@ class AuthService {
     // Validación de negocio
 
     // Manejar el registro
+
+    await auth.api.signUpEmail({
+      body: {
+        name,
+        email,
+        password,
+      },
+    });
   }
 }
 
